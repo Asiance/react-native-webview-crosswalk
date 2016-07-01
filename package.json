@@ -2,10 +2,8 @@
     "name":             "react-native-webview-crosswalk",
     "version":          "0.2.4",
     "description":      "Crosswalk's WebView for React Native on Android",
-    "repository":       {
-        "type": "git",
-        "url":  "git+https://github.com/jordansexton/react-native-webview-crosswalk.git"
-    },
+    "private": true,
+    "repository": "Asiance/react-native-webview-crosswalk",
     "keywords":         [
         "react",
         "native",
@@ -27,9 +25,9 @@
     ],
     "license":          "MIT",
     "bugs":             {
-        "url": "https://github.com/jordansexton/react-native-webview-crosswalk/issues"
+        "url": "https://github.com/Asiance/react-native-webview-crosswalk/issues"
     },
-    "homepage":         "https://github.com/jordansexton/react-native-webview-crosswalk",
+    "homepage":         "https://github.com/Asiance/react-native-webview-crosswalk",
     "peerDependencies": {
         "react":        ">=0.14.5",
         "react-native": ">=0.25.0"
