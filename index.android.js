@@ -1,9 +1,8 @@
 'use strict';
 
-import React, { PropTypes } from 'react';
+import React, { PropTypes, PureRenderMixin } from 'react';
 import ReactNative, { requireNativeComponent, View, StyleSheet, addons, NativeModules } from 'react-native';
 
-const {PureRenderMixin} = addons;
 const { UIManager, CrosswalkWebViewManager: { JSNavigationScheme } } = NativeModules;
 
 var resolveAssetSource = require('react-native/Libraries/Image/resolveAssetSource')
