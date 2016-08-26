@@ -1,9 +1,12 @@
 {
     "name":             "react-native-webview-crosswalk",
-    "version":          "0.2.5",
+    "version":          "0.3.0",
     "description":      "Crosswalk's WebView for React Native on Android",
     "private": true,
     "repository": "Asiance/react-native-webview-crosswalk",
+    "scripts":          {
+        "lint":        "eslint ."
+    },
     "keywords":         [
         "react",
         "native",
@@ -29,7 +32,15 @@
     },
     "homepage":         "https://github.com/Asiance/react-native-webview-crosswalk",
     "peerDependencies": {
-        "react":        ">=0.14.5",
-        "react-native": ">=0.25.0"
+        "react":        ">=15.2.0",
+        "react-native": ">=0.29.0"
+    },
+    "dependencies":     {
+        "node-wget": "0.4.2"
+    },
+    "devDependencies":  {
+        "babel-eslint":        "6.1.2",
+        "eslint":              "3.2.2",
+        "eslint-plugin-react": "6.0.0"
     }
 }
