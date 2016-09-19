@@ -1,14 +1,11 @@
 'use strict';
 
-import React, { PropTypes } from 'react';
-import ReactNative, { requireNativeComponent, View } from 'react-native';
+import React, {PropTypes, PureRenderMixin} from 'react';
+import {View, StyleSheet, NativeModules, UIManager, requireNativeComponent} from 'react-native';
 
-var {
-    addons: { PureRenderMixin },
-    NativeModules: { UIManager, CrosswalkWebViewManager: { JSNavigationScheme } }
-} = ReactNative;
+const resolveAssetSource = require('react-native/Libraries/Image/resolveAssetSource');
 
-var resolveAssetSource = require('react-native/Libraries/Image/resolveAssetSource');
+const {CrosswalkWebViewManager: {JSNavigationScheme}} = NativeModules;
 
 var WEBVIEW_REF = 'crosswalkWebView';
 
