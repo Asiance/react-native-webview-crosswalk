@@ -1,7 +1,8 @@
 'use strict';
 
-import React, {PropTypes, PureRenderMixin} from 'react';
+import React, {PropTypes} from 'react';
 import {View, StyleSheet, NativeModules, UIManager, requireNativeComponent} from 'react-native';
+import PureRenderMixin from 'react-addons-pure-render-mixin';
 
 const resolveAssetSource = require('react-native/Libraries/Image/resolveAssetSource');
 
