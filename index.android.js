@@ -40,17 +40,20 @@ var CrosswalkWebView = React.createClass({
         if (this.props.url) {
             source.uri = this.props.url;
         }
+        var nativeProps = Object.assign({}, this.props, {
+            onCrosswalkWebViewNavigationStateChange: this.onNavigationStateChange,
+            onCrosswalkWebViewError: this.onError
+        });
         return (
             <NativeCrosswalkWebView
-                { ...this.props }
-                onError={ this.onError }
-                onNavigationStateChange={ this.onNavigationStateChange }
+                { ...nativeProps }
                 ref={ WEBVIEW_REF }
-                source={ resolveAssetSource(source) }/>
+                source={ resolveAssetSource(source) }
+            />
         );
     },
     getWebViewHandle () {
-        return React.findNodeHandle(this.refs[WEBVIEW_REF]);
+        return ReactNative.findNodeHandle(this.refs[WEBVIEW_REF]);
     },
     onNavigationStateChange (event) {
         var { onNavigationStateChange } = this.props;
@@ -67,21 +70,21 @@ var CrosswalkWebView = React.createClass({
     goBack () {
         UIManager.dispatchViewManagerCommand(
             this.getWebViewHandle(),
-            UIManager.NativeCrosswalkWebView.Commands.goBack,
+            UIManager.CrosswalkWebView.Commands.goBack,
             null
         );
     },
     goForward () {
         UIManager.dispatchViewManagerCommand(
             this.getWebViewHandle(),
-            UIManager.NativeCrosswalkWebView.Commands.goForward,
+            UIManager.CrosswalkWebView.Commands.goForward,
             null
         );
     },
     reload () {
         UIManager.dispatchViewManagerCommand(
             this.getWebViewHandle(),
-            UIManager.NativeCrosswalkWebView.Commands.reload,
+            UIManager.CrosswalkWebView.Commands.reload,
             null
         );
     }
