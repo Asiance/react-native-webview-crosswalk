@@ -5,7 +5,8 @@
   "private": true,
   "repository": "Asiance/react-native-webview-crosswalk",
   "scripts": {
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "fetch-lib": "node get_library.js"
   },
   "keywords": [
     "react",
@@ -42,6 +43,7 @@
   "devDependencies": {
     "babel-eslint": "6.1.2",
     "eslint": "3.2.2",
-    "eslint-plugin-react": "6.0.0"
+    "eslint-plugin-react": "6.0.0",
+    "node-wget": "^0.4.2"
   }
 }
