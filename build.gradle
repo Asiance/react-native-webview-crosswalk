@@ -25,15 +25,3 @@ dependencies {
     compile "com.facebook.react:react-native:+"
     compile (name: "xwalk_core_library-23.53.589.4", ext: "aar")
 }
-
- configurations.all {
-    resolutionStrategy {
-        eachDependency { DependencyResolveDetails details ->
-            if (details.requested.group == 'com.facebook.react' && details.requested.name == 'react-native') {
-                def file = new File("$rootDir/../node_modules/react-native/package.json")
-                def version = new groovy.json.JsonSlurper().parseText(file.text).version
-                details.useVersion version
-            }
-        }
-    }
-}
